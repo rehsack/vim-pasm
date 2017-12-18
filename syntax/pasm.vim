@@ -23,6 +23,7 @@ syn match pasmTrailingSpace " \+$"
 syn match pasmDot "^\s*\.\w\+"
 syn match pasmLabel "^\s*\h\w\+:"
 syn region pasmString start=/"/ end=/"/
+syn region pasmComment start="/\*" end="\*/"
 
 hi def link pasmComment Comment
 hi def link pasmNumber Number
