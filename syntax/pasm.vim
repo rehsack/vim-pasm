@@ -22,6 +22,9 @@ syn match pasmHash "^\s*#\w\+"
 syn match pasmTrailingSpace " \+$"
 syn match pasmDot "^\s*\.\w\+"
 syn match pasmLabel "^\s*\h\w\+:"
+syn match pasmLabel "r[0-9]\{1,2}"
+syn match pasmLabel "r[0-9]\{1,2}\.b[0-9]\{1,2}"
+syn match pasmLabel "r[0-9]\{1,2}\.w[0-9]\{1,2}"
 syn region pasmString start=/"/ end=/"/
 syn region pasmComment start="/\*" end="\*/"
 
@@ -33,5 +36,4 @@ hi def link pasmTrailingSpace Error
 hi def link pasmOpcode Operator
 hi def link pasmHash PreProc
 hi def link pasmDot Type
-hi def link pasmLabel Identifier
 hi def link pasmString String
